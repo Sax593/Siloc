@@ -11,25 +11,25 @@
 }
 
 .rating {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stars {
   display: inline-flex;
   justify-content: center;
-  font-size: calc(App.$font-size *1.8);
+  font-size: calc(App.$font-size * 1.8);
 }
 
 .fa-star {
-	color: gray;
-	cursor: pointer;
-	padding: 0.0625rem;
+  color: gray;
+  cursor: pointer;
+  padding: 0.0625rem;
 }
 
 .fa-star.gold {
-	color: App.$colorFourth;
+  color: App.$colorFourth;
 }
 
 .stars:hover .fa-star {
@@ -37,11 +37,8 @@
 }
 
 .stars .fa-star:hover ~ .fa-star {
-  color: App.$colorFourth;;
+  color: App.$colorFourth;
 }
-
-
-
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .carOverview,
