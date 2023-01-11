@@ -1,3 +1,5 @@
+import "./reset.scss";
+import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./services/reset.scss";

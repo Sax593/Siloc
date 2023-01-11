@@ -1,0 +1,22 @@
+@use "../src/App.scss";
+
+@media screen and (min-device-width: 320px) and (max-device-width: 900px) {
+  .logo {
+    display: block;
+    margin: auto;
+  }
+  .style-form {
+    display: flex;
+    flex-direction: column;
+    font-family: App.$colorSecondary;
+    font-size: App.$font-size;
+    margin: 0 1rem;
+  }
+  .form-profil {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-details {
+    margin-bottom: 1rem;
+  }
+}
