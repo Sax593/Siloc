@@ -1,23 +1,40 @@
 const AbstractManager = require("./AbstractManager");
 
-class vehiculesManager extends AbstractManager {
+class VehiculesManager extends AbstractManager {
   constructor() {
     super({ table: "vehicules" });
   }
 
   insert(vehicules) {
     return this.connection.query(
-      `insert into ${this.table} (title) values (?)`,
-      [vehicules.title]
+      `insert into ${this.table} (brand, model, mileage, lastrent, disponibility_id, fleet_id, type) values (?,?,?,?,?,?,?)`,
+      [
+        vehicules.brand,
+        vehicules.model,
+        vehicules.mileage,
+        vehicules.lastrent,
+        vehicules.disponibility_id,
+        vehicules.fleet_id,
+        vehicules.type,
+      ]
     );
   }
 
   update(vehicules) {
     return this.connection.query(
-      `update ${this.table} set title = ? where id = ?`,
-      [vehicules.title, vehicules.id]
+      `update ${this.table} set brand=?, model=?, mileage=?, lastrent=?, disponibility_id=?, fleet_id=?, type=? where id = ?`,
+      [
+        vehicules.brand,
+        vehicules.model,
+        vehicules.mileage,
+        vehicules.lastrent,
+        vehicules.disponibility_id,
+        vehicules.fleet_id,
+        vehicules.type,
+        vehicules.id,
+      ]
     );
   }
 }
 
-module.exports = vehiculesManager;
+module.exports = VehiculesManager;
