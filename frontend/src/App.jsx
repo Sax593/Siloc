@@ -1,12 +1,10 @@
-import Checkout from "@pages/Checkout/Checkout";
 import { Route, Routes } from "react-router-dom";
+import Checkout from "@pages/Checkout/Checkout";
 import Home from "@pages/Home/Home";
 import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
 import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
-import "./App.scss";
-import { Routes, Route } from "react-router-dom";
-
 import Form from "@pages/Form/Form";
+import "./App.scss";
 
 function App() {
   return (
