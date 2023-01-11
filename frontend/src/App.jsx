@@ -1,10 +1,13 @@
 import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+
+import Form from "@pages/Form/Form";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome</h1>
-    </div>
+    <Routes>
+      <Route path="/form" element={<Form />} />
+    </Routes>
   );
 }
 
