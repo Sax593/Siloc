@@ -1,0 +1,23 @@
+.carPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.carOverview,
+.carInfoOverview {
+  margin-top: 20%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .carOverview,
+  .carInfoOverview {
+    margin-top: 20%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .carOverview,
+  .carInfoOverview {
+    margin-top: 5%;
+  }
+}
