@@ -5,7 +5,6 @@ import { Route, Routes } from "react-router-dom";
 import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
 import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import "./App.scss";
-import { Routes, Route } from "react-router-dom";
 
 import Form from "@pages/Form/Form";
 
