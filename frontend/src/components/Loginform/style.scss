@@ -1,0 +1,54 @@
+@use "../../App.scss";
+
+.lgForm {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .loginh4 {
+    color: App.$colorThird;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 1rem;
+  }
+
+  .logininp {
+    background-color: App.$colorSecondary;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+    box-shadow: App.$boxShadow;
+    height: 5vh;
+    font-family: App.$font-family;
+    font-weight: bolder;
+    width: 75vw;
+  }
+  .logininp:focus {
+    background-color: App.$colorSecondary;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+  }
+
+  .loginbtn {
+    width: 75vw;
+    height: 5vh;
+    background-color: App.$colorSecondary;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+    box-shadow: App.$boxShadow;
+    margin-top: 2rem;
+  }
+
+  .loginbtn:active {
+    background-color: App.$colorSecondary;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+  }
+}
