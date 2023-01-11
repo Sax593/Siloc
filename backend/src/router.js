@@ -1,14 +1,26 @@
 const express = require("express");
+const fs = require("fs");
+
+const multer = require("multer");
+
+const upload = multer({ dest: "uploads/" });
+const { v4: uuidv4 } = require("uuid");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
+router.post("/api/licence", upload.single("licence"), (req, res) => {
+  const { originalname } = req.file;
+  const { filename } = req.file;
 
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
+  fs.rename(
+    `uploads/${filename}`,
+    `uploads/${uuidv4()}-${originalname}`,
+    (err) => {
+      if (err) throw err;
+      res.send("File uploaded");
+    }
+  );
+});
 
 const usersControllers = require("./controllers/usersControllers");
 
@@ -20,7 +32,7 @@ router.delete("/users/:id", usersControllers.destroy);
 
 const vehiculesControllers = require("./controllers/vehiculesControllers");
 
-router.get("/vehicles", vehiculesControllers.browse);
+router.get("/vehicules", vehiculesControllers.browse);
 router.get("/vehicules/:id", vehiculesControllers.read);
 router.put("/vehicules/:id", vehiculesControllers.edit);
 router.post("/vehicules", vehiculesControllers.add);
