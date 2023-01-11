@@ -1,0 +1,12 @@
+@use "../../App.scss";
+
+.electricCar1{
+    height: 30vh;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    border-radius: App.$borderRadius ;
+    border: App.$border;
+    box-shadow: App.$boxShadow;;
+
+}
