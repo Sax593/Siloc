@@ -1,6 +1,63 @@
 @use "../../App.scss";
 
 .MyQRCode {
-  width: 200px;
   height: 200px;
+  font-family: App.$font-family;
+}
+
+.h2Order {
+  font-family: App.$font-family;
+  font-size: App.$font-size-title;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.QRCodeParagraph {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: App.$font-size;
+  font-family: App.$font-family;
+}
+
+.sendCustomerFeedback {
+  background-color: App.$colorSecondary;
+  border-radius: App.$borderRadius;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+  width: 20vh;
+  height: 2rem;
+}
+
+.MyCarIsReady {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: App.$font-family;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.txtArea {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .electricCar1 {
+    height: 30vh;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .electricCar1 {
+    height: 70vh;
+  }
 }
