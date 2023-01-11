@@ -20,6 +20,9 @@ export default function LoginForm() {
       <button className="loginbtn" type="button">
         Log In!
       </button>
+      <a className="loginh4" href="/form">
+        Register
+      </a>
     </div>
   );
 }
