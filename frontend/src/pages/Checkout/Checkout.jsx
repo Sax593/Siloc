@@ -13,19 +13,19 @@ export default function Checkout() {
         className="MyQRCode"
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Qrcode_wikipedia_fr_v2clean.png"
         alt="qrcode"
-      ></img>
+      />
       <br />
       <br />
       <form>
-        <input type="checkbox" id="order" value="isok"></input>
-        <label for="filters">My car is ready to use?</label>
+        <input type="checkbox" id="order" value="isok" />
+        <label htmlFor="filters">My car is ready to use?</label>
         <br />
         <br />
       </form>
-      <textarea name="customerFeedback" id="" cols="30" rows="10"></textarea>
+      <textarea name="customerFeedback" id="" cols="30" rows="10" />
       <br />
       <br />
-      <button> Send</button>
+      <button type="button"> Send</button>
     </>
   );
 }
