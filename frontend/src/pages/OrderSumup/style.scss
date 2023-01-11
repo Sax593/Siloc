@@ -1,0 +1,22 @@
+.orderpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ordertitle {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.buttonprocess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.processbtn {
+  width: 40vw;
+  height: 2rem;
+  padding: 0 1em;
+}

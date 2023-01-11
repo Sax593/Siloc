@@ -7,6 +7,7 @@ import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import "./App.scss";
 
 import Form from "@pages/Form/Form";
+import OrderSumup from "@pages/OrderSumup/OrderSumup";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/car" element={<SingleCarScreen />} />
       <Route path="/dashboard" element={<CarDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/order" element={<OrderSumup />} />
     </Routes>
   );
 }

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host --host",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "echo '----- Checking Frontend...' && prettier --debug-check . && eslint --ext .jsx . && echo '----- Done!'",
@@ -15,7 +15,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.6.2",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "template-fullstack": "file:.."
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
