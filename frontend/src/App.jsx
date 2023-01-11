@@ -7,11 +7,9 @@ import "./App.scss";
 function App() {
   return (
     <Routes>
-
       <Route path="/" element={<Home />} />
       <Route path="/car" element={<SingleCarScreen />} />
       <Route path="/checkout" element={<Checkout />} />
-
     </Routes>
   );
 }
