@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./services/reset.scss";
 import { Router } from "react-router-dom";
 
 import App from "./App";
