@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap");
 
 $font-family: "Titillium Web", sans-serif; //regular 400 or semiBold 600 or bold 700 or black 900
-$font-size: 1.5em;
+$font-size: 1em;
 $font-size-title: 2rem;
 $colorBackGround: #dde1d8;
-$colorSecondary: #273439;
-$colorThird: #4eada0;
+$colorSecondary: #273439; // background button
+$colorThird: #4eada0; // color font
 $colorFourth: #927b60;
 $borderRadius: 0.5em;
 $border: 1px #927b60 solid;
@@ -19,3 +19,7 @@ $boxShadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 //ex: .className{
 //   font-size: App.$font-size;
 // }
+:root {
+  background-color: $colorBackGround;
+  font-family: $font-family;
+}
