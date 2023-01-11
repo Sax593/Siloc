@@ -1,0 +1,22 @@
+@use "../../App.scss";
+
+* {
+  margin: auto;
+  margin-top: 2vh;
+  .listSilo {
+    margin-left: 10vw;
+  }
+  .DateTime {
+    margin-left: 10vw;
+    input {
+      margin-right: 2rem;
+    }
+  }
+  .submit {
+    width: 30vw;
+    margin: auto;
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-around;
+  }
+}
