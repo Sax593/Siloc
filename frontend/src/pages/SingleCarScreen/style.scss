@@ -1,17 +1,63 @@
+@use "../../App.scss";
+
+.modelCar {
+  font-size: App.$font-size-title;
+  font-family: App.$font-family;
+  color: App.$colorSecondary;
+  text-align: center;
+  margin-top: 5%;
+  font-weight: 700;
+  text-decoration: underline double App.$colorFourth;
+}
+
+.typeCar {
+  font-size: App.$font-size;
+  font-family: App.$font-family;
+  color: App.$colorFourth;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 2%;
+}
+
 .carPage {
   display: flex;
   flex-direction: column;
 }
 
-.carOverview,
-.carInfoOverview {
-  margin-top: 20%;
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stars {
+  display: inline-flex;
+  justify-content: center;
+  font-size: calc(App.$font-size * 1.8);
+}
+
+.fa-star {
+  color: gray;
+  cursor: pointer;
+  padding: 0.0625rem;
+}
+
+.fa-star.gold {
+  color: App.$colorFourth;
+}
+
+.stars:hover .fa-star {
+  color: rgb(219, 161, 15);
+}
+
+.stars .fa-star:hover ~ .fa-star {
+  color: App.$colorFourth;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .carOverview,
   .carInfoOverview {
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
 
