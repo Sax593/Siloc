@@ -15,6 +15,7 @@ $boxShadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 :root {
   background-color: $colorBackGround;
   height: 100vh;
+  font-family: $font-family;
 }
 
 //à mettre au début de votre SCSS:
