@@ -1,7 +1,7 @@
-import "./style.scss";
 import logoSmall from "@assets/logoSmall.png";
 import { useState, useRef } from "react";
 import axios from "axios";
+import "./style.scss";
 
 export default function Form() {
   const [users, setUsers] = useState({
