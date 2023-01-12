@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function ListingCar() {
   const [listing, setListing] = useState([]);
-  const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/vehiculesfind/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/vehiculesfind/1`)
       .then(({ data }) => {
         setListing(data);
       })
