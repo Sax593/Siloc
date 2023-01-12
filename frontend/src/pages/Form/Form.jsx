@@ -82,10 +82,15 @@ export default function Form() {
 
         <label className="form-details" htmlFor="fileInput">
           I upload my licence:
-          <input type="file" name="monfichier" ref={inputRef} />
+          <input
+            type="file"
+            placeholder="I upload my licence:"
+            name="monfichier"
+            ref={inputRef}
+          />
         </label>
 
-        <button className="form-details" type="submit">
+        <button className="form-btn" type="submit">
           Envoyer
         </button>
       </form>
