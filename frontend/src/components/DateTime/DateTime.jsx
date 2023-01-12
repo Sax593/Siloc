@@ -22,17 +22,17 @@ export default function DateTime({ data, setData }) {
       <div className="CarType">
         <Link to="/BookingType1">
           <button type="button" className="BookingType">
-            Type 1{" "}
+            Type 1
           </button>
         </Link>
         <Link to="/BookingType2">
           <button type="button" className="BookingType">
-            Type 2{" "}
+            Type 2
           </button>
         </Link>
         <Link to="/BookingType3">
           <button type="button" className="BookingType">
-            Type 3{" "}
+            Type 3
           </button>
         </Link>
       </div>
