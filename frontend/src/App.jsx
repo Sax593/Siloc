@@ -9,6 +9,7 @@ import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
 import Geolocation from "@pages/Geolocation/Geolocation";
 import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
+import DashboardListing from "@pages/DashboardListing/DashboardListing";
 import "./App.scss";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/carTransfert" element={<CarTransfert />} />
       <Route path="/dashboard" element={<CarDashboardBySilo />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
+      <Route path="/dashboardListing" element={<DashboardListing />} />
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
       <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
