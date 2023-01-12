@@ -20,9 +20,7 @@
   margin-right: 5%;
   margin-top: 2%;
   height: 20vh;
-
 }
-
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
   .siloInfo {
@@ -31,7 +29,7 @@
     flex-wrap: wrap;
   }
   .storageRemain,
-  .storageFull{
+  .storageFull {
     height: 40vh;
     margin-top: 2%;
   }
@@ -43,7 +41,7 @@
     flex-direction: column;
   }
   .storageRemain,
-  .storageFull{
+  .storageFull {
     height: 30vh;
     align-content: center;
   }
