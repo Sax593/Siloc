@@ -10,12 +10,50 @@
     border-radius: App.$borderRadius;
   }
 
-  .title-cartransfert {
+  .titleVT{
+    text-decoration: underline double App.$colorFourth;
+  }
+
+  .style-formCT{
+    gap: 0.5em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: App.$colorSecondary;
+    font-size: App.$font-size;
+  }
+
+  .exportIcon{
+    color: green;
+    font-size: 3em;
+  }
+
+  .importIcon{
+    color: red;
+    font-size: 3em;
+  }
+
+  .iconTitle{
+    display: flex;
+    justify-content: center;
+  }
+
+  .title-cartransfertTitle {
     font-size: App.$font-size-title;
     color: App.$colorSecondary;
     text-align: center;
-    margin: 1rem;
+    align-self: center;
   }
+  .title-cartransfert{
+    font-size: App.$font-size-title;
+    color: App.$colorSecondary;
+    text-align: center;
+    align-self: center;
+    margin: 0.5em;
+    margin-bottom: 1em;
+  }
+
   .style-cartransfert {
     display: flex;
     flex-direction: column;
@@ -29,19 +67,20 @@
     height: 5vh;
     font-family: App.$font-family;
     font-weight: bolder;
-    width: 75vw;
+    width: 50vw;
+    margin: auto;
+    color: App.$colorFourth;
   }
   .infos-to-sent:focus {
     background-color: App.$colorSecondary;
     color: App.$colorThird;
-    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
-      0 0 60px App.$colorSecondary;
+    box-shadow: App.$boxShadow;
+    border-radius: App.$borderRadius;
   }
   .transfert-btn {
     background-color: App.$colorSecondary;
-    color: App.$colorThird;
-    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
-      0 0 60px App.$colorSecondary;
     margin-bottom: 1rem;
+    width: 15vw;
+    margin: auto;
   }
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import tunnel from "@assets/tunnel.png";
-import { FcFeedIn, FcExport } from "react-icons/fc";
+import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 import swal from "sweetalert";
 import "./style.scss";
 
@@ -36,11 +36,14 @@ export default function CarTransfert() {
 
   return (
     <div className="style-carTransfert">
+      <h1 className="title-cartransfert titleVT">Vehicle transfer</h1>
       <img className="tunnel" src={tunnel} alt="tunnel" />
-      <h1 className="title-cartransfert">Vehicles transfer</h1>
-      <h2 className="title-cartransfert">{FcExport} To send </h2>
+      <section className="iconTitle">
+        <BsArrowRightShort className="importIcon" />
+        <h2 className="title-cartransfertTitle">To send</h2>
+      </section>
       <form
-        className="style-form"
+        className="style-formCT"
         encType="multipart/from-data"
         onSubmit={hSubmit}
       >
@@ -89,10 +92,12 @@ export default function CarTransfert() {
           Send
         </button>
       </form>
-      <h2 className="title-cartransfert">{FcFeedIn} To request</h2>
-
+      <section className="iconTitle">
+        <BsArrowLeftShort className="exportIcon" />
+        <h2 className="title-cartransfertTitle">To request</h2>
+      </section>
       <form
-        className="style-form"
+        className="style-formCT"
         encType="multipart/from-data"
         onSubmit={hSubmit}
       >
