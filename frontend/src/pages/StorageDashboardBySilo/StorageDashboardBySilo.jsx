@@ -3,7 +3,9 @@ import SiloInfo from "@components/SiloInfo/SiloInfo";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./style.scss";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { ImArrowLeft } from "react-icons/im";
+import { GiHomeGarage } from "react-icons/gi";
 
 export default function StorageDashboardBySilo() {
   const [storage, setStorage] = useState({});
@@ -24,6 +26,18 @@ export default function StorageDashboardBySilo() {
     <div>
       <p className="sectorName">{storage.name}</p>
       <h1 className="currentStorage">Storage</h1>
+      <div className="iconMenu">
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <GiHomeGarage className="icon" />
+          </button>
+        </Link>
+        <Link to="/sectors/1">
+          <button type="button" className="homeIcon">
+            <ImArrowLeft className="icon" />
+          </button>
+        </Link>
+      </div>
       <div className="storageOverview">
         <section className="storageOverviewImage">
           <SiloImage />

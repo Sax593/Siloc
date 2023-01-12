@@ -3,7 +3,9 @@ import CarInfo from "@components/CarInfo/CarInfo";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { ImArrowLeft } from "react-icons/im";
+import { GiHomeGarage } from "react-icons/gi";
 import "./style.scss";
 
 export default function SingleCarScreen() {
@@ -26,6 +28,18 @@ export default function SingleCarScreen() {
         {vehicle.brand} - {vehicle.model}
       </h1>
       <h2 className="typeCar">{vehicle.type}</h2>
+      <div className="iconMenu">
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <GiHomeGarage className="icon" />
+          </button>
+        </Link>
+        <Link to="/listingcar">
+          <button type="button" className="homeIcon">
+            <ImArrowLeft className="icon" />
+          </button>
+        </Link>
+      </div>
       <section className="carOverview">
         <CarImage />
       </section>
