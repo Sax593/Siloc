@@ -1,6 +1,7 @@
 import logoSmall from "@assets/logoSmall.png";
 import { useState, useRef } from "react";
 import axios from "axios";
+import swal from "sweetalert";
 import "./style.scss";
 
 export default function Form() {
@@ -24,6 +25,11 @@ export default function Form() {
     const formData = new FormData();
     formData.append("license", inputRef.current.files[0]);
     axios.post(`${import.meta.env.VITE_BACKEND_URL}/users`, users);
+    swal({
+      title: "Success",
+      text: "Your account has been registered",
+      icon: "success",
+    });
   };
   return (
     <div className="style-form">
@@ -100,7 +106,7 @@ export default function Form() {
         </label>
 
         <button className="form-btn" type="submit">
-          Envoyer
+          Send
         </button>
       </form>
     </div>
