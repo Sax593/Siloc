@@ -1,0 +1,46 @@
+@use "../src/App.scss";
+
+@media screen and (min-device-width: 320px) and (max-device-width: 900px) {
+  .tunnel {
+    display: block;
+    margin: 1rem auto;
+    height: 50%;
+    width: 50%;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+  }
+
+  .title-cartransfert {
+    font-size: App.$font-size-title;
+    color: App.$colorSecondary;
+    text-align: center;
+    margin: 1rem;
+  }
+  .style-cartransfert {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .infos-to-sent {
+    background-color: App.$colorSecondary;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+    box-shadow: App.$boxShadow;
+    height: 5vh;
+    font-family: App.$font-family;
+    font-weight: bolder;
+    width: 75vw;
+  }
+  .infos-to-sent:focus {
+    background-color: App.$colorSecondary;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+  }
+  .transfert-btn {
+    background-color: App.$colorSecondary;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+  }
+}
