@@ -1,18 +1,7 @@
 @use "../../App.scss";
-// * {
-//   font-size: App.$font-size;
-//   //   margin: auto;
 
-//   button {
-//     background-color: App.$colorSecondary;
-//     color: App.$colorThird;
-//     border-radius: App.$borderRadius;
-//     box-shadow: App.$boxShadow;
-//     width: 20vw;
-//     text-align: center;
-//   }
-//   .button {
-//     display: flex;
-//     justify-content: space-around;
-//   }
-// }
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+

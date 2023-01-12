@@ -1,4 +1,5 @@
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   return (
@@ -16,18 +17,22 @@ export default function Checkout() {
       </div>
       <form className="MyCarIsReady">
         <input type="checkbox" id="order" value="isok" />
-        <label htmlFor="filters">My car is ready to use?</label>
+        <label className="orderCheckbox" htmlFor="filters">My car is ready to use?</label>
       </form>
       <div className="txtArea">
-        <textarea name="customerFeedback" id="" cols="30" rows="10" />
+        <textarea
+          name="customerFeedback"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Tell us how fine is your car?"
+        />
       </div>
-      <br />
-      <br />
-      <div className="buttonWrapper">
+      <Link className="buttonWrapper" to="/validationScreen">
         <button className="sendCustomerFeedback" type="button">
           Send
         </button>
-      </div>
+      </Link>
     </>
   );
 }
