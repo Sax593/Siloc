@@ -10,3 +10,62 @@
   margin-top: 2vh;
   font-weight: 700;
 }
+.electricCar3 {
+  height: 30vh;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  border-radius: App.$borderRadius;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+}
+.DateTime {
+  font-weight: 600;
+  margin: auto;
+  margin-top: 6vh;
+  margin-left: 5vw;
+
+  .CarType {
+    margin: auto;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    .BookingType {
+      height: 5vh;
+      width: 20vw;
+    }
+  }
+  input {
+    margin: 5vw;
+    background-color: App.$colorSecondary;
+    box-shadow: App.$boxShadow;
+    color: App.$colorThird;
+    border-radius: App.$borderRadius;
+  }
+  .ChooseSilo {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    .localisationInput {
+      margin: 5vw;
+      background-color: App.$colorSecondary;
+      box-shadow: App.$boxShadow;
+      color: App.$colorThird;
+      border-radius: App.$borderRadius;
+    }
+  }
+  .ButtonOk {
+    display: flex;
+    margin: auto;
+  }
+  .submit {
+    font-weight: 600;
+    margin: auto;
+    margin-top: 4vh;
+    height: 7vh;
+    width: 30vw;
+    text-align: center;
+    justify-items: center;
+  }
+}

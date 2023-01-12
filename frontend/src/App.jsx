@@ -4,6 +4,9 @@ import Home from "@pages/Home/Home";
 import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import CarTransfert from "@pages/CarTransfert/CarTransfert";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
+import BookingScreen1 from "@pages/BookingScreen/BookingScreen1";
+import BookingScreen2 from "@pages/BookingScreen/BookingScreen2";
+import BookingScreen3 from "@pages/BookingScreen/BookingScreen3";
 import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
 import Geolocation from "@pages/Geolocation/Geolocation";
@@ -12,6 +15,7 @@ import DashboardListing from "@pages/DashboardListing/DashboardListing";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
 import SectorListing from "@pages/SectorListing/SectorListing";
 import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
+
 import "./App.scss";
 import CarListingScreen from "@pages/CarListingScreen/CarListingScreen";
 
@@ -19,7 +23,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/bookingScreen" element={<BookingScreen />} />
+      <Route path="/bookingtype" element={<BookingScreen />} />
+      <Route path="/bookingtype1" element={<BookingScreen1 />} />
+      <Route path="/bookingtype2" element={<BookingScreen2 />} />
+      <Route path="/bookingtype3" element={<BookingScreen3 />} />
       <Route path="/form" element={<Form />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
       <Route path="/checkout" element={<Checkout />} />

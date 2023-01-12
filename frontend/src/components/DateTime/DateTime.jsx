@@ -1,6 +1,6 @@
-import "./style.scss";
 import propTypes from "prop-types";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function DateTime({ data, setData }) {
   const hChange = (evt) => {
@@ -19,9 +19,21 @@ export default function DateTime({ data, setData }) {
   return (
     <form onSubmit={hSubmit} className="DateTime">
       <div className="CarType">
-        <button type="button">Type 1 </button>
-        <button type="button">Type 2 </button>
-        <button type="button">Type 3 </button>
+        <Link to="/BookingType1">
+          <button type="button" className="BookingType">
+            Type 1{" "}
+          </button>
+        </Link>
+        <Link to="/BookingType2">
+          <button type="button" className="BookingType">
+            Type 2{" "}
+          </button>
+        </Link>
+        <Link to="/BookingType3">
+          <button type="button" className="BookingType">
+            Type 3{" "}
+          </button>
+        </Link>
       </div>
       <div className="DateTime">
         <label className="ADDate">
@@ -43,7 +55,7 @@ export default function DateTime({ data, setData }) {
           />
         </label>
       </div>
-      <div>
+      <div className="ChooseSilo">
         <label className="listSilo">
           Choose your silo
           <select
