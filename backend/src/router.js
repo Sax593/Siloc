@@ -54,4 +54,12 @@ router.put("/booking/:id", bookingControllers.edit);
 router.post("/booking", bookingControllers.add);
 router.delete("/booking/:id", bookingControllers.destroy);
 
+const transferControllers = require("./controllers/transferControllers");
+
+router.get("/transfer", transferControllers.browse);
+router.get("/transfer/:id", transferControllers.read);
+router.put("/transfer/:id", transferControllers.edit);
+router.post("/transfer", transferControllers.add);
+router.delete("/transfer/:id", transferControllers.destroy);
+
 module.exports = router;
