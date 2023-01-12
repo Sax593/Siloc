@@ -35,6 +35,14 @@ class VehiculesManager extends AbstractManager {
       ]
     );
   }
+
+  findAllVehicules(siloid) {
+    return this.connection.query(
+      `SELECT ${this.table}.id as id_vehicules, brand, model, mileage, disponibility_id, type, id_silo, silo.name, silo.localisation FROM ${this.table}
+      INNER JOIN silo on ${this.table}.id_silo = silo.id where silo.id = ? LIMIT 10`,
+      [siloid]
+    );
+  }
 }
 
 module.exports = VehiculesManager;
