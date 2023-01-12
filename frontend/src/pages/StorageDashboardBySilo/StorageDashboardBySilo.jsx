@@ -32,7 +32,7 @@ export default function StorageDashboardBySilo() {
             <GiHomeGarage className="icon" />
           </button>
         </Link>
-        <Link to="/sectors/1">
+        <Link to="/sectors/2">
           <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
