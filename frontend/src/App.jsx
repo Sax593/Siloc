@@ -6,6 +6,7 @@ import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
 import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
+import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
 import "./App.scss";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Route path="/bookingScreen" element={<BookingScreen />} />
       <Route path="/form" element={<Form />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
-      <Route path="/dashboard" element={<CarDashboardBySilo />} />
+      <Route path="/carDashboard" element={<CarDashboardBySilo />} />
+      <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
     </Routes>
