@@ -46,4 +46,19 @@ router.put("/silo/:id", siloControllers.edit);
 router.post("/silo", siloControllers.add);
 router.delete("/silo/:id", siloControllers.destroy);
 
+const bookingControllers = require("./controllers/bookingControllers");
+
+router.get("/booking", bookingControllers.browse);
+router.get("/booking/:id", bookingControllers.read);
+router.put("/booking/:id", bookingControllers.edit);
+router.post("/booking", bookingControllers.add);
+router.delete("/booking/:id", bookingControllers.destroy);
+
+const transferControllers = require("./controllers/transferControllers");
+
+router.get("/transfer", transferControllers.browse);
+router.get("/transfer/:id", transferControllers.read);
+router.put("/transfer/:id", transferControllers.edit);
+router.post("/transfer", transferControllers.add);
+router.delete("/transfer/:id", transferControllers.destroy);
 module.exports = router;
