@@ -46,7 +46,8 @@ export default function LoginForm() {
         text: "Login success!",
         icon: "success",
       });
-      navigate("/order");
+
+      navigate("/bookingscreen");
     } else if (
       formData.name === "waquetv@siloc.com" &&
       formData.password === users.hashedpassword
@@ -57,6 +58,7 @@ export default function LoginForm() {
         icon: "success",
       });
       navigate("/sectors");
+
     } else {
       Swal.fire({
         title: "Failed",
