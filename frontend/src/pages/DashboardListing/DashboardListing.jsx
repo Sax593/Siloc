@@ -5,6 +5,7 @@ import {
   BsArrowBarLeft,
   BsArrowLeftRight,
 } from "react-icons/bs";
+import { ImArrowLeft } from "react-icons/im";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -28,6 +29,18 @@ export default function DashboardListing() {
     <div>
       <p className="sectorName">{storage.name}</p>
       <h1 className="dashboardL">Dashboard</h1>
+      <div className="iconMenu">
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <GiHomeGarage className="icon" />
+          </button>
+        </Link>
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <ImArrowLeft className="icon" />
+          </button>
+        </Link>
+      </div>
       <div className="dashboardListing">
         <Link
           to={{ pathname: `/storageDashboard/${storage.id}` }}

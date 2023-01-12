@@ -51,6 +51,11 @@
   margin-bottom: 2%;
 }
 
+.iconMenu {
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
   .sectorsList {
     display: flex;

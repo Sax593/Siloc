@@ -9,9 +9,11 @@ export default function DateTime({ data, setData }) {
 
   const hSubmit = (evt) => {
     evt.preventDefault();
-    axios.post("http://localhost:5000/booking", data).catch((error) => {
-      console.error(error);
-    });
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/booking`, data)
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
