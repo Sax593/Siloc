@@ -51,7 +51,10 @@ export default function DashboardListing() {
             <h4 className="textDL">Storage</h4>
           </button>
         </Link>
-        <Link to="/carDashboard" className="myCurrentCarsLink">
+        <Link
+          to={{ pathname: `/carDashboard/${storage.id}` }}
+          className="myCurrentCarsLink"
+        >
           <button type="button" className="myCurrentCars">
             <AiFillCar className="iconDB" />
             <BsArrowBarLeft className="iconDB" />
@@ -65,7 +68,7 @@ export default function DashboardListing() {
             <h4 className="textDL">My outside cars</h4>
           </button>
         </Link>
-        <Link to="/transfer" className="myTransfertLink">
+        <Link to={{ pathname: `/carTransfert` }} className="myTransfertLink">
           <button type="button" className="carTransfert">
             <AiFillCar className="iconDB" />
             <BsArrowLeftRight className="iconDB" />

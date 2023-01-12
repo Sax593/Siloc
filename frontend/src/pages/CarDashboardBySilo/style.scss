@@ -45,6 +45,12 @@
   margin-bottom: 2%;
 }
 
+.btndashboard {
+  font-size: calc(App.$font-size * 1.2);
+  margin-top: 20%;
+  border: none;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
   .dashboardCarsBySilo {
     display: flex;
