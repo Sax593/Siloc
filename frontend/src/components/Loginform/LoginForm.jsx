@@ -1,15 +1,25 @@
-// import axios from "axios";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.scss";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     password: "",
   });
-
-  // const inputRef = useRef();
-
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/users/2`)
+      .then(({ data }) => {
+        setUsers(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
   const hChange = (evt) => {
     const { name, value, type, checked } = evt.target;
     let newValue = null;
@@ -24,26 +34,19 @@ export default function LoginForm() {
     }
     setFormData({ ...formData, [name]: newValue });
   };
-  // const hSubmit = (evt) => {
-  //   evt.preventDefault();
-
-  //   axios
-  //     .post("/auth/login", formData)
-  //     .then(({ data }) => {
-  //       const { token, user } = data;
-  //       axios.defaults.headers.authorization = `Bearer ${token}`;
-  //       dispatch({ type: "USER_LOGIN", payload: { ...user, token } });
-  //       console.warn(
-  //         "TODO !!! Remove token from Redux and implement httpOnly cookie !"
-  //       );
-  //       send.status(201);
-  //     })
-  //     .catch(() => {
-  //       send.status(500);
-  //     });
-  // };
+  const isItUsers = (evt) => {
+    evt.preventDefault();
+    if (
+      formData.name === users.email &&
+      formData.password === users.hashedpassword
+    ) {
+      navigate("/order");
+    } else {
+      alert("An error has occurred");
+    }
+  };
   return (
-    <div className="lgForm">
+    <form className="lgForm" onSubmit={isItUsers}>
       <legend className="loginh4">Log in your next trip over city</legend>
       <h4 className="loginh4">E-mail: </h4>
       <input
@@ -69,6 +72,6 @@ export default function LoginForm() {
       <a className="loginh4" href="/form">
         Register
       </a>
-    </div>
+    </form>
   );
 }
