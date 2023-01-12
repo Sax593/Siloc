@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { MdOutlineShareLocation } from "react-icons/md";
 import "./style.scss";
+import ButtonLogOut from "@components/ButtonLogOut/ButtonLogOut";
 
 export default function SectorListing() {
   const [sector, setSector] = useState([]);
@@ -19,6 +20,7 @@ export default function SectorListing() {
   }, []);
   return (
     <div>
+      <ButtonLogOut />
       <h1 className="sectorsListTitle">Sectors</h1>
       <div className="sectorsList">
         {sector.map((element) => {
