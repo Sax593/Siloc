@@ -37,6 +37,7 @@ router.get("/vehicules/:id", vehiculesControllers.read);
 router.put("/vehicules/:id", vehiculesControllers.edit);
 router.post("/vehicules", vehiculesControllers.add);
 router.delete("/vehicules/:id", vehiculesControllers.destroy);
+router.get("/vehiculesfind/:id", vehiculesControllers.findAllVehicules);
 
 const siloControllers = require("./controllers/siloControllers");
 
