@@ -1,21 +1,10 @@
 @use "../../App.scss";
 
-* {
-  font-size: App.$font-size;
-
-  button {
-    background-color: App.$colorSecondary;
-    color: App.$colorThird;
-    border-radius: App.$borderRadius;
-    box-shadow: App.$boxShadow;
-    width: 20vw;
-    text-align: center;
-  }
-  .button {
-    display: flex;
-    justify-content: space-around;
-  }
+.button {
+  display: flex;
+  justify-content: space-around;
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .electricCar1 {
     height: 30vh;
