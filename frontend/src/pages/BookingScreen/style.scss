@@ -1,0 +1,12 @@
+@use "../../App.scss";
+.titleBooking {
+  font-size: App.$font-size-title;
+  color: App.$colorSecondary;
+  text-decoration: underline double App.$colorFourth;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  font-weight: 700;
+}
