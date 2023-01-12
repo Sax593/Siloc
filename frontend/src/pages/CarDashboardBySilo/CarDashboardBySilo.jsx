@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { ImArrowLeft } from "react-icons/im";
+import { GiHomeGarage } from "react-icons/gi";
 import "./style.scss";
 
 export default function CarDashboardBySilo() {
@@ -21,6 +23,18 @@ export default function CarDashboardBySilo() {
     <div>
       <p className="sectorName">{dispo.name}</p>
       <h1 className="currentCars">My current cars</h1>
+      <div className="iconMenu">
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <GiHomeGarage className="icon" />
+          </button>
+        </Link>
+        <Link to="/sectors/1">
+          <button type="button" className="homeIcon">
+            <ImArrowLeft className="icon" />
+          </button>
+        </Link>
+      </div>
       <div className="dashboardCarsBySilo">
         <Link className="avalaibleCars" to="/listingcar">
           <button type="button" className="btndashboard">

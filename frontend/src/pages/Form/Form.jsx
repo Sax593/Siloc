@@ -1,4 +1,4 @@
-import logoSmall from "@assets/logoSmall.png";
+import logo from "@assets/logo.png";
 import { useState, useRef } from "react";
 import axios from "axios";
 import swal from "sweetalert";
@@ -33,7 +33,7 @@ export default function Form() {
   };
   return (
     <div className="style-form">
-      <img className="logo" src={logoSmall} alt="logo" />
+      <img className="logo" src={logo} alt="logo" />
 
       <form
         className="form-profil"
