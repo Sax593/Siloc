@@ -1,7 +1,7 @@
 import "./style.scss";
 import DateTime from "@components/DateTime/DateTime";
 import { useState } from "react";
-import car3 from "@assets/cars_image/car3.png";
+import car3 from "@assets/cars_image/car2.png";
 
 export default function BookingScreen() {
   const [data, setData] = useState({

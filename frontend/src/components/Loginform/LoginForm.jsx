@@ -47,7 +47,7 @@ export default function LoginForm() {
         icon: "success",
       });
 
-      navigate("/bookingscreen");
+      navigate("/bookingtype");
     } else if (
       formData.name === "waquetv@siloc.com" &&
       formData.password === users.hashedpassword

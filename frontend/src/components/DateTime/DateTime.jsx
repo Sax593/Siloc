@@ -1,19 +1,20 @@
 import propTypes from "prop-types";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function DateTime({ data, setData }) {
+  const navigate = useNavigate();
   const hChange = (evt) => {
     setData({ ...data, [evt.target.name]: evt.target.value });
   };
 
   const hSubmit = (evt) => {
     evt.preventDefault();
-    axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/booking`, data)
-      .catch((error) => {
-        console.error(error);
-      });
+    // axios
+    //   .post(`${import.meta.env.VITE_BACKEND_URL}/booking`, data)
+    //   .catch((error) => {
+    //     console.error(error);
+    //   });
+    navigate("/order");
   };
 
   return (
