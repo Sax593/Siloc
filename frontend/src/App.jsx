@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Checkout from "@pages/Checkout/Checkout";
 import Home from "@pages/Home/Home";
-import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
 import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import CarTransfert from "@pages/CarTransfert/CarTransfert";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
@@ -22,8 +21,10 @@ function App() {
       <Route path="/form" element={<Form />} />
       <Route path="/carTransfert" element={<CarTransfert />} />
       <Route path="/dashboard" element={<CarDashboardBySilo />} />
+
       <Route path="/car/:id" element={<SingleCarScreen />} />
       <Route path="/dashboardListing" element={<DashboardListing />} />
+
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
       <Route
         path="/storageDashboard/:id"

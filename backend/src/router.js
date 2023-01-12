@@ -61,5 +61,4 @@ router.get("/transfer/:id", transferControllers.read);
 router.put("/transfer/:id", transferControllers.edit);
 router.post("/transfer", transferControllers.add);
 router.delete("/transfer/:id", transferControllers.destroy);
-
 module.exports = router;
