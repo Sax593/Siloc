@@ -55,7 +55,7 @@ export default function DashboardListing() {
             <h4 className="textDL">My outside cars</h4>
           </button>
         </Link>
-        <Link to="/transfer" className="myTransfertLink">
+        <Link to={{ pathname: `/carTransfert` }} className="myTransfertLink">
           <button type="button" className="carTransfert">
             <AiFillCar className="iconDB" />
             <BsArrowLeftRight className="iconDB" />
