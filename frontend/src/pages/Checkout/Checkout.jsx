@@ -17,7 +17,9 @@ export default function Checkout() {
       </div>
       <form className="MyCarIsReady">
         <input type="checkbox" id="order" value="isok" />
-        <label className="orderCheckbox" htmlFor="filters">My car is ready to use?</label>
+        <label className="orderCheckbox" htmlFor="filters">
+          My car is ready to use?
+        </label>
       </form>
       <div className="txtArea">
         <textarea
