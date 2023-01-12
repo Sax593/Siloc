@@ -1,25 +1,27 @@
 @use "../src/App.scss";
 
 @media screen and (min-device-width: 320px) and (max-device-width: 900px) {
-  .logo {
+  .tunnel {
     display: block;
-    margin: auto;
+    margin: 1rem auto;
+    height: 50%;
+    width: 50%;
+    border: App.$border;
+    border-radius: App.$borderRadius;
   }
-  .style-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: App.$colorSecondary;
-    font-size: App.$font-size;
-    margin: 0 1rem;
-  }
-  .form-profil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .form-details {
+
+  .title-cartransfert {
+    font-size: App.$font-size-title;
+    color: App.$colorSecondary;
+    text-align: center;
     margin: 1rem;
+  }
+  .style-cartransfert {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .infos-to-sent {
     background-color: App.$colorSecondary;
     border: App.$border;
     border-radius: App.$borderRadius;
@@ -29,20 +31,17 @@
     font-weight: bolder;
     width: 75vw;
   }
-  .form-details:focus {
+  .infos-to-sent:focus {
     background-color: App.$colorSecondary;
     color: App.$colorThird;
     box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
       0 0 60px App.$colorSecondary;
   }
-  .form-btn {
-    width: 75vw;
-    height: 5vh;
+  .transfert-btn {
     background-color: App.$colorSecondary;
-    border: App.$border;
-    border-radius: App.$borderRadius;
-    box-shadow: App.$boxShadow;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+    margin-bottom: 1rem;
   }
 }

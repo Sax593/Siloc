@@ -12,7 +12,7 @@ export default function Orderinfo() {
       <div className="ordercgv">
         <input id="cgv" name="cgv" type="checkbox" />
         <label className="labelcgv" htmlFor="cgv">
-          Accept CGV
+          Accept General terms and conditions
         </label>
       </div>
     </section>
