@@ -1,11 +1,9 @@
 import "./style.scss";
-import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import { Link } from "react-router-dom";
 
 export default function Checkout() {
   return (
     <>
-      <BurgerMenu />
       <h2 className="h2Order">Your order has been completed!</h2>
       <p className="QRCodeParagraph">
         Please scan your QR Code directly at the entrance of the silo.
