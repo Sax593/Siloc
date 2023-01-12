@@ -1,0 +1,84 @@
+@use "../../App.scss";
+
+.sectorsListTitle {
+  font-size: App.$font-size-title;
+  font-family: App.$font-family;
+  color: App.$colorSecondary;
+  text-align: center;
+  margin: 5% 0;
+  font-weight: 700;
+  text-decoration: underline double App.$colorFourth;
+}
+#sectorName {
+  color: App.$colorThird;
+  font-size: calc(App.$font-size * 1.2);
+  border: none;
+  box-shadow: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  height: 10vh;
+  position: relative;
+}
+
+.iconLocSL {
+  position: absolute;
+  font-size: 3em;
+  color: App.$colorFourth;
+  width: 100%;
+  padding-top: 25%;
+}
+
+.sectorsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.sector {
+  border-radius: App.$borderRadius;
+  text-align: center;
+  font-size: calc(App.$font-size * 1.2);
+  background-color: App.$colorSecondary;
+  color: App.$colorThird;
+  font-family: App.$font-family;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  height: 20vh;
+}
+
+.maintenance {
+  margin-bottom: 2%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .sectorsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sector {
+    height: 40vh;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .sectorsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sector {
+    height: 40vh;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+}

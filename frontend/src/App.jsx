@@ -12,6 +12,7 @@ import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboa
 import DashboardListing from "@pages/DashboardListing/DashboardListing";
 import "./App.scss";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
+import SectorListing from "@pages/SectorListing/SectorListing";
 
 function App() {
   return (
@@ -24,11 +25,15 @@ function App() {
       <Route path="/car/:id" element={<SingleCarScreen />} />
       <Route path="/dashboardListing" element={<DashboardListing />} />
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
-      <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />
+      <Route
+        path="/storageDashboard/:id"
+        element={<StorageDashboardBySilo />}
+      />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
       <Route path="/geolocation" element={<Geolocation />} />
       <Route path="/validationScreen" element={<ValidationScreen />} />
+      <Route path="/sectors" element={<SectorListing />} />
     </Routes>
   );
 }
