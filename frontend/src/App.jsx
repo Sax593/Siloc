@@ -34,7 +34,6 @@ function App() {
         element={<StorageDashboardBySilo />}
       />
       <Route path="/listingcar" element={<CarListingScreen />} />
-
       <Route path="/carDashboard/:id" element={<CarDashboardBySilo />} />
     </Routes>
   );
