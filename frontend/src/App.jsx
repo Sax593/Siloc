@@ -7,8 +7,10 @@ import CarTransfert from "@pages/CarTransfert/CarTransfert";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
 import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
+import Geolocation from "@pages/Geolocation/Geolocation";
 import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
 import "./App.scss";
+import ValidationScreen from "@pages/ValidationScreen/Validation";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
+      <Route path="/geolocation" element={<Geolocation />} />
+      <Route path="/validationScreen" element={<ValidationScreen />} />
     </Routes>
   );
 }

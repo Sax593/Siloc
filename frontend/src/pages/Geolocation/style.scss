@@ -1,0 +1,22 @@
+@use "../../App.scss";
+
+.mapImg {
+  width: 87%;
+  margin: auto;
+  border-radius: App.$borderRadius;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+}
+
+.mapWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.h2Geolocation {
+  font-family: App.$font-family;
+  font-size: App.$font-size-title;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
