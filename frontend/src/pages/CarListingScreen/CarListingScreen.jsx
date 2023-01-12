@@ -5,11 +5,14 @@ import "./style.scss";
 
 export default function CarListingScreen() {
   return (
-    <section className="listingfilter">
-      <section className="listingcar">
-        <CarType />
-        <ListingCar />
+    <>
+      <h1 className="carsListTitle">List of cars</h1>
+      <section className="listingfilter">
+        <section className="listingcar">
+          <CarType />
+          <ListingCar />
+        </section>
       </section>
-    </section>
+    </>
   );
 }

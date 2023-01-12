@@ -21,7 +21,7 @@ export default function ListingCar() {
         {listing.map((element) => {
           return (
             <Link to={{ pathname: `/car/${element.id_vehicules}` }}>
-              <li className="car" key={element.id}>
+              <li className="carsList" key={element.id}>
                 {element.brand} {element.type} {element.mileage}miles
               </li>
             </Link>

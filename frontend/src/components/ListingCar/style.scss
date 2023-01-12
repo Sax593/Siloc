@@ -1,7 +1,15 @@
+@use "../../App.scss";
+
 .vehiclelisting {
   padding: 1rem 0;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+  border-radius: App.$borderRadius;
+  margin-top: 5%;
 }
 
-.car {
-  padding: 0.5em 0;
+.carsList {
+  padding: 0.5em 0.5em;
+  font-size: App.$font-size;
+  font-family: App.$font-family;
 }
