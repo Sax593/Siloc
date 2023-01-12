@@ -31,12 +31,12 @@ export default function DashboardListing() {
       <h1 className="dashboardL">Dashboard</h1>
       <div className="iconMenu">
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <GiHomeGarage className="icon" />
           </button>
         </Link>
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
         </Link>

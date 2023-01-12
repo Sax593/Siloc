@@ -10,12 +10,12 @@ export default function Geolocation() {
       <h2 className="h2Geolocation">Currently 34 cars are outside the silo</h2>
       <div className="iconMenu">
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <GiHomeGarage className="icon" />
           </button>
         </Link>
-        <Link to="/sectors/1">
-          <button type="button" className="homeIcon">
+        <Link to="/sectors/2">
+          <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
         </Link>
