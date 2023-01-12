@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "./style.scss";
 
 export default function LoginForm() {
@@ -40,9 +41,18 @@ export default function LoginForm() {
       formData.name === users.email &&
       formData.password === users.hashedpassword
     ) {
+      Swal.fire({
+        title: "Welcome",
+        text: "Login success!",
+        icon: "success",
+      });
       navigate("/order");
     } else {
-      alert("An error has occurred");
+      Swal.fire({
+        title: "Nop",
+        text: "Login failed!",
+        icon: "error",
+      });
     }
   };
   return (

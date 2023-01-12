@@ -1,27 +1,61 @@
 import "./style.scss";
+import propTypes from "prop-types";
+import axios from "axios";
 
-export default function DateTime() {
+export default function DateTime({ data, setData }) {
+  const hChange = (evt) => {
+    setData({ ...data, [evt.target.name]: evt.target.value });
+  };
+
+  const hSubmit = (evt) => {
+    evt.preventDefault();
+    axios.post("http://localhost:5000/booking", data).catch((error) => {
+      console.error(error);
+    });
+  };
+
   return (
-    <>
+    <form onSubmit={hSubmit} className="DateTime">
+      <div className="CarType">
+        <button type="button">Type 1 </button>
+        <button type="button">Type 2 </button>
+        <button type="button">Type 3 </button>
+      </div>
       <div className="DateTime">
-        <label>
+        <label className="ADDate">
           Départ
-          <input type="time" />
+          <input
+            name="departure_date"
+            defaultValue={data.departure_date}
+            type="time"
+            onChange={hChange}
+          />
         </label>
-        <label>
+        <label className="ADDate">
           Arrivée
-          <input type="time" />
+          <input
+            name="arrival_date"
+            defaultValue={data.arrival_date}
+            type="time"
+            onChange={hChange}
+          />
         </label>
       </div>
       <div>
         <label className="listSilo">
           Choose your silo
-          <select className="localisationInput" required>
-            <option value="---">Localisation</option>
-            <option value="Africa">Paris Nord: La vilette</option>
-            <option value="Africa">Paris Ouest : Auteuil </option>
-            <option value="America">Paris Est : Bastille</option>
-            <option value="Asia">Paris Sud : Place d'Italie</option>
+          <select
+            className="localisationInput"
+            onChange={hChange}
+            name="silo_id"
+            required
+          >
+            <option value={data.silo_id}>Localisation</option>
+            <option value={1}>Portes des Lilas</option>
+            <option value={2}>Gare du Nord</option>
+            <option value={3}>Victor Hugo</option>
+            <option value={4}>Croix rouge </option>
+            <option value={5}>Porte Molitor</option>
           </select>
         </label>
       </div>
@@ -30,6 +64,14 @@ export default function DateTime() {
           OK
         </button>
       </div>
-    </>
+    </form>
   );
 }
+DateTime.propTypes = {
+  data: propTypes.shape({
+    departure_date: propTypes.string.isRequired,
+    arrival_date: propTypes.string.isRequired,
+    silo_id: propTypes.string.isRequired,
+  }).isRequired,
+  setData: propTypes.func.isRequired,
+};

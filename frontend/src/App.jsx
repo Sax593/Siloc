@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Checkout from "@pages/Checkout/Checkout";
 import Home from "@pages/Home/Home";
-import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
 import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import CarTransfert from "@pages/CarTransfert/CarTransfert";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
@@ -10,9 +9,10 @@ import OrderSumup from "@pages/OrderSumup/OrderSumup";
 import Geolocation from "@pages/Geolocation/Geolocation";
 import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
 import DashboardListing from "@pages/DashboardListing/DashboardListing";
-import "./App.scss";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
 import SectorListing from "@pages/SectorListing/SectorListing";
+import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
+import "./App.scss";
 import CarListingScreen from "@pages/CarListingScreen/CarListingScreen";
 
 function App() {
