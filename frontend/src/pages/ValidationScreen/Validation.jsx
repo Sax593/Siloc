@@ -1,6 +1,7 @@
 import "./style.scss";
 import car2 from "@assets/cars_image/car2.png";
 import { Link } from "react-router-dom";
+import ButtonLogOut from "@components/ButtonLogOut/ButtonLogOut";
 
 export default function ValidationScreen() {
   return (
@@ -13,9 +14,7 @@ export default function ValidationScreen() {
         <img className="futurCar2" src={car2} alt="futurCar2" />
       </div>
       <Link className="buttonHomeWrapper" to="/">
-        <button className="buttonReturnToHome" type="button">
-          Log Out
-        </button>
+        <ButtonLogOut className="buttonReturnToHome" />
       </Link>
     </>
   );
