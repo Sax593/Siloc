@@ -23,7 +23,6 @@ function App() {
       <Route path="/form" element={<Form />} />
       <Route path="/carTransfert" element={<CarTransfert />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
-      <Route path="/carDashboard/:id" element={<CarDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
       <Route path="/geolocation" element={<Geolocation />} />
@@ -35,6 +34,7 @@ function App() {
         element={<StorageDashboardBySilo />}
       />
       <Route path="/listingcar" element={<CarListingScreen />} />
+      <Route path="/carDashboard/:id" element={<CarDashboardBySilo />} />
     </Routes>
   );
 }
