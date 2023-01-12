@@ -13,6 +13,7 @@ import ValidationScreen from "@pages/ValidationScreen/Validation";
 import SectorListing from "@pages/SectorListing/SectorListing";
 import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
 import "./App.scss";
+import CarListingScreen from "@pages/CarListingScreen/CarListingScreen";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         path="/storageDashboard/:id"
         element={<StorageDashboardBySilo />}
       />
+      <Route path="/listingcar" element={<CarListingScreen />} />
+
       <Route path="/carDashboard/:id" element={<CarDashboardBySilo />} />
     </Routes>
   );
