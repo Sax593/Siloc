@@ -1,7 +1,15 @@
-import propTypes from "prop-types";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
-export default function DateTime({ data, setData }) {
+export default function DateTime() {
+  const [data, setData] = useState({
+    vehicle_type: "Electric",
+    departure_time: "",
+    arrival_time: "",
+    silo_id: "",
+    users_id: 2,
+  });
   const navigate = useNavigate();
   const hChange = (evt) => {
     setData({ ...data, [evt.target.name]: evt.target.value });
@@ -9,11 +17,11 @@ export default function DateTime({ data, setData }) {
 
   const hSubmit = (evt) => {
     evt.preventDefault();
-    // axios
-    //   .post(`${import.meta.env.VITE_BACKEND_URL}/booking`, data)
-    //   .catch((error) => {
-    //     console.error(error);
-    //   });
+    axios
+      .post(`${import.meta.env.VITE_BACKEND_URL}/booking`, data)
+      .catch((error) => {
+        console.error(error);
+      });
     navigate("/order");
   };
 
@@ -40,18 +48,18 @@ export default function DateTime({ data, setData }) {
         <label className="ADDate">
           Départ
           <input
-            name="departure_date"
-            defaultValue={data.departure_date}
-            type="time"
+            name="departure_time"
+            defaultValue={data.departure_time}
+            type="datetime-local"
             onChange={hChange}
           />
         </label>
         <label className="ADDate">
           Arrivée
           <input
-            name="arrival_date"
-            defaultValue={data.arrival_date}
-            type="time"
+            name="arrival_time"
+            defaultValue={data.arrival_time}
+            type="datetime-local"
             onChange={hChange}
           />
         </label>
@@ -82,11 +90,3 @@ export default function DateTime({ data, setData }) {
     </form>
   );
 }
-DateTime.propTypes = {
-  data: propTypes.shape({
-    departure_date: propTypes.string.isRequired,
-    arrival_date: propTypes.string.isRequired,
-    silo_id: propTypes.string.isRequired,
-  }).isRequired,
-  setData: propTypes.func.isRequired,
-};
