@@ -3,6 +3,9 @@ import axios from "axios";
 import tunnel from "@assets/tunnel.png";
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 import swal from "sweetalert";
+import { ImArrowLeft } from "react-icons/im";
+import { GiHomeGarage } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function CarTransfert() {
@@ -37,6 +40,18 @@ export default function CarTransfert() {
   return (
     <div className="style-carTransfert">
       <h1 className="title-cartransfert titleVT">Vehicle transfer</h1>
+      <div className="iconMenu">
+        <Link to="/sectors">
+          <button type="button" className="homeIcon">
+            <GiHomeGarage className="icon" />
+          </button>
+        </Link>
+        <Link to="/sectors/1">
+          <button type="button" className="homeIcon">
+            <ImArrowLeft className="icon" />
+          </button>
+        </Link>
+      </div>
       <img className="tunnel" src={tunnel} alt="tunnel" />
       <section className="iconTitle">
         <BsArrowRightShort className="importIcon" />
