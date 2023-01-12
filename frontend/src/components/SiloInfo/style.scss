@@ -1,0 +1,50 @@
+@use "../../App.scss";
+
+.siloInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.storageRemain,
+.storageFull {
+  border: App.$border;
+  border-radius: App.$borderRadius;
+  box-shadow: App.$boxShadow;
+  text-align: center;
+  font-size: App.$font-size;
+  background-color: App.$colorSecondary;
+  color: App.$colorThird;
+  font-family: App.$font-family;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  height: 20vh;
+
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+  .siloInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .storageRemain,
+  .storageFull{
+    height: 40vh;
+    margin-top: 2%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .siloInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .storageRemain,
+  .storageFull{
+    height: 30vh;
+    align-content: center;
+  }
+}

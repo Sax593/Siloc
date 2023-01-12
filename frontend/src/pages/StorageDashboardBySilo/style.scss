@@ -1,0 +1,53 @@
+@use "../../App.scss";
+
+.sectorName {
+  text-align: end;
+  font-size: App.$font-size;
+  font-family: App.$font-family;
+  color: App.$colorFourth;
+  margin: 2%;
+}
+
+.currentStorage {
+  font-size: App.$font-size-title;
+  font-family: App.$font-family;
+  color: App.$colorSecondary;
+  text-align: center;
+  margin: 5% 0;
+  font-weight: 700;
+  text-decoration: underline double App.$colorFourth;
+}
+
+.dashboardStorageBySilo {
+  display: flex;
+  flex-direction: column;
+}
+
+.storageInfoOverview{
+  margin-top: 5%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .storageOverview,
+  .storageInfoOverview {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .storageOverviewImage,
+  .storageInfoOverview {
+    margin-top: 2%;
+    width: 100%;
+  }
+  .storageOverview{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+  .storageOverviewImage{
+    margin-bottom: 5%;
+  }
+
+
+}
