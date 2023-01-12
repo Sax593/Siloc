@@ -1,4 +1,3 @@
-import "./style.scss";
 import { GiHomeGarage } from "react-icons/gi";
 import { AiFillCar } from "react-icons/ai";
 import {
@@ -6,15 +5,34 @@ import {
   BsArrowBarLeft,
   BsArrowLeftRight,
 } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import "./style.scss";
 
 export default function DashboardListing() {
+  const [storage, setStorage] = useState({});
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/silo/${id}`)
+      .then(({ data }) => {
+        setStorage(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
   return (
     <div>
-      <p className="sectorName">Sector Name</p>
+      <p className="sectorName">{storage.name}</p>
       <h1 className="dashboardL">Dashboard</h1>
       <div className="dashboardListing">
-        <Link to="/storageDashboard" className="myStorageLink">
+        <Link
+          to={{ pathname: `/storageDashboard/${storage.id}` }}
+          className="myStorageLink"
+        >
           <button type="button" className="storage">
             <GiHomeGarage className="iconDB" />
             <h4 className="textDL">Storage</h4>

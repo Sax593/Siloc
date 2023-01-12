@@ -22,17 +22,17 @@ function App() {
       <Route path="/form" element={<Form />} />
       <Route path="/carTransfert" element={<CarTransfert />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
-      <Route path="/dashboardListing" element={<DashboardListing />} />
-      <Route path="/carDashboard" element={<CarDashboardBySilo />} />
-      <Route
-        path="/storageDashboard/:id"
-        element={<StorageDashboardBySilo />}
-      />
+      <Route path="/carDashboard/:id" element={<CarDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
       <Route path="/geolocation" element={<Geolocation />} />
       <Route path="/validationScreen" element={<ValidationScreen />} />
       <Route path="/sectors" element={<SectorListing />} />
+      <Route path="/sectors/:id" element={<DashboardListing />} />
+      <Route
+        path="/storageDashboard/:id"
+        element={<StorageDashboardBySilo />}
+      />
     </Routes>
   );
 }
