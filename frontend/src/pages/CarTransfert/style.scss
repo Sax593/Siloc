@@ -10,11 +10,11 @@
     border-radius: App.$borderRadius;
   }
 
-  .titleVT{
+  .titleVT {
     text-decoration: underline double App.$colorFourth;
   }
 
-  .style-formCT{
+  .style-formCT {
     gap: 0.5em;
     margin: 1em 0;
     display: flex;
@@ -24,17 +24,17 @@
     font-size: App.$font-size;
   }
 
-  .exportIcon{
+  .exportIcon {
     color: green;
     font-size: 3em;
   }
 
-  .importIcon{
+  .importIcon {
     color: red;
     font-size: 3em;
   }
 
-  .iconTitle{
+  .iconTitle {
     display: flex;
     justify-content: center;
   }
@@ -45,7 +45,7 @@
     text-align: center;
     align-self: center;
   }
-  .title-cartransfert{
+  .title-cartransfert {
     font-size: App.$font-size-title;
     color: App.$colorSecondary;
     text-align: center;
