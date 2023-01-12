@@ -1,18 +1,32 @@
 @use "../../App.scss";
 
-.button {
+// .buttonType {
+
+// }
+
+.buttonTypesList {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  border: hidden;
+  gap: 0.5em;
+}
+
+.buttonType {
+  padding: 0.5em;
+  font-family: App.$font-family;
+  font-size: App.$font-size;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .electricCar1 {
-    height: 30vh;
-  }
+  // .electricCar1 {
+  //   height: 30vh;
+  // }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .electricCar1 {
-    height: 70vh;
-  }
+  // .electricCar1 {
+  //   height: 70vh;
+  // }
 }

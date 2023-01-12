@@ -19,7 +19,7 @@ export default function ListingCar() {
       <ul>
         {listing.map((element) => {
           return (
-            <li className="car" key={element.id}>
+            <li className="carsList" key={element.id}>
               {element.brand} {element.type} {element.mileage}miles
             </li>
           );

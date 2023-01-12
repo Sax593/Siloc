@@ -58,7 +58,6 @@ export default function LoginForm() {
         icon: "success",
       });
       navigate("/sectors");
-
     } else {
       Swal.fire({
         title: "Failed",
