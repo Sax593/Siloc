@@ -12,7 +12,10 @@ a:visited {
   left: 1rem;
   top: 15px;
 }
-
+.menu-item {
+  color: white;
+  border: none;
+}
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: App.$colorSecondary;
