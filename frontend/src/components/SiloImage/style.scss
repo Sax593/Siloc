@@ -1,0 +1,23 @@
+@use "../../App.scss";
+
+.silo1 {
+  height: 30vh;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  border-radius: App.$borderRadius;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .silo1 {
+    height: 30vh;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .silo1 {
+    height: 70vh;
+  }
+}
