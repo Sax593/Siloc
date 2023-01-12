@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "./style.scss";
 
 export default function ListingCar() {
   const [listing, setListing] = useState([]);
+  const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/vehiculesfind/1`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/vehiculesfind/${id}`)
       .then(({ data }) => {
         setListing(data);
       })
@@ -19,9 +21,11 @@ export default function ListingCar() {
       <ul>
         {listing.map((element) => {
           return (
-            <li className="car" key={element.id}>
-              {element.brand} {element.type} {element.mileage}miles
-            </li>
+            <Link to={{ pathname: `/car/${element.id_vehicules}` }}>
+              <li className="car" key={element.id}>
+                {element.brand} {element.type} {element.mileage}miles
+              </li>
+            </Link>
           );
         })}
       </ul>
