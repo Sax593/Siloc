@@ -29,7 +29,7 @@ export default function CarDashboardBySilo() {
             <GiHomeGarage className="icon" />
           </button>
         </Link>
-        <Link to="/sectors/1">
+        <Link to="/sectors/2">
           <button type="button" className="homeIcon">
             <ImArrowLeft className="icon" />
           </button>

@@ -2,7 +2,7 @@
 
 .listingfilter {
   margin: 0 3%;
-  margin-top: 10%;
+  margin-top: 5%;
   border-radius: App.$borderRadius;
 }
 
@@ -18,4 +18,12 @@
   margin: 2%;
   margin-top: 5%;
   text-decoration: underline double App.$colorFourth;
+}
+
+.iconMenu {
+  display: flex;
+  justify-content: center;
+}
+.homeIcon {
+  margin-top: 1rem;
 }
