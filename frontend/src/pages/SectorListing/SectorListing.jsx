@@ -24,7 +24,7 @@ export default function SectorListing() {
         {sector.map((element) => {
           return (
             <Link
-              to={{ pathname: `/storageDashboard/${element.id}` }}
+              to={{ pathname: `/sectors/${element.id}` }}
               key={element.id}
               className="sector"
             >
