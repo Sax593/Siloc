@@ -4,9 +4,12 @@ import SiloCard from "@assets/maps/SiloCard.jpg";
 export default function Geolocation() {
   return (
     <>
-      <h2 className="h2Geolocation"> Currently 23 cars are outside the silo </h2>
+      <h2 className="h2Geolocation">
+        {" "}
+        Currently 23 cars are outside the silo{" "}
+      </h2>
       <div className="mapWrapper">
-        <img className="mapImg" src={SiloCard}></img>
+        <img className="mapImg" src={SiloCard} alt="cars-mapping" />
       </div>
     </>
   );
