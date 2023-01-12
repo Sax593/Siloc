@@ -46,7 +46,7 @@ export default function LoginForm() {
         text: "Login success!",
         icon: "success",
       });
-      navigate("/order");
+      navigate("/bookingscreen");
     } else {
       Swal.fire({
         title: "Nop",
