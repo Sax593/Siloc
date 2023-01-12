@@ -18,5 +18,28 @@
   }
   .form-details {
     margin-bottom: 1rem;
+    background-color: App.$colorSecondary;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+    box-shadow: App.$boxShadow;
+    height: 5vh;
+    font-family: App.$font-family;
+    font-weight: bolder;
+    width: 75vw;
+  }
+  .form-details:focus {
+    background-color: App.$colorSecondary;
+    color: App.$colorThird;
+    box-shadow: 0 0 8px App.$colorSecondary, 0 0 35px App.$colorSecondary,
+      0 0 60px App.$colorSecondary;
+  }
+  .form-btn {
+    width: 75vw;
+    height: 5vh;
+    background-color: App.$colorSecondary;
+    border: App.$border;
+    border-radius: App.$borderRadius;
+    box-shadow: App.$boxShadow;
+    margin-top: 2rem;
   }
 }
