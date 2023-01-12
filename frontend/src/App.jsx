@@ -6,7 +6,9 @@ import CarDashboardBySilo from "@pages/CarDashboardBySilo/CarDashboardBySilo";
 import BookingScreen from "@pages/BookingScreen/BookingScreen";
 import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
+import Geolocation from "@pages/Geolocation/Geolocation";
 import "./App.scss";
+import ValidationScreen from "@pages/ValidationScreen/Validation";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path="/dashboard" element={<CarDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/order" element={<OrderSumup />} />
+      <Route path="/geolocation" element={<Geolocation />} />
+      <Route path="/validationScreen" element={<ValidationScreen />} />
     </Routes>
   );
 }
