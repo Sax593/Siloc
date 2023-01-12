@@ -7,6 +7,7 @@ import BookingScreen from "@pages/BookingScreen/BookingScreen";
 import Form from "@pages/Form/Form";
 import OrderSumup from "@pages/OrderSumup/OrderSumup";
 import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
+import DashboardListing from "@pages/DashboardListing/DashboardListing";
 import "./App.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/bookingScreen" element={<BookingScreen />} />
       <Route path="/form" element={<Form />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
+      <Route path="/dashboardListing" element={<DashboardListing />} />
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
       <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />
       <Route path="/checkout" element={<Checkout />} />
