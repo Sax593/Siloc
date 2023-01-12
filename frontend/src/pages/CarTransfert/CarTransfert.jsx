@@ -1,27 +1,34 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 import tunnel from "@assets/tunnel.png";
 import "./style.scss";
 
 export default function CarTransfert() {
   const [carsTransfert, setCarsTransferts] = useState({
-    nbCarsToTransfer: "",
+    nb_vehicles: "",
     time: "",
+    id: "",
   });
+  const [silos, setSilos] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/silo`).then(({ data }) => {
+      setSilos(data);
+    });
+  }, []);
 
   const handleInput = (e) => {
     setCarsTransferts({ ...carsTransfert, [e.target.name]: e.target.value });
   };
 
-  axios.post("http://localhost:5000/transfert", carsTransfert);
-
   const hSubmit = (evt) => {
     evt.preventDefault();
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/transfert`, carsTransfert);
   };
   return (
     <div className="style-carTransfert">
       <img className="tunnel" src={tunnel} alt="tunnel" />
-      <h1 className="title-cartransfert">Vehicle transfer</h1>
+      <h1 className="title-cartransfert">Vehicles transfer</h1>
       <h2 className="title-cartransfert">To send</h2>
       <form
         className="style-form"
@@ -33,21 +40,42 @@ export default function CarTransfert() {
           type="number"
           value={carsTransfert.nb_vehicles}
           placeholder="How many car to send ?"
-          name="nbCarsToTransfer"
+          name="nb_vehicles"
           onChange={handleInput}
           required
         />
-
         <input
           className="infos-to-sent"
           type="time"
-          placeholder="to"
+          placeholder="heure"
           value={carsTransfert.time}
           name="time"
           onChange={handleInput}
           required
         />
+        <select className="infos-to-sent" required>
+          <option value="---">From</option>
+          {silos.map((silo) => {
+            return (
+              <option key={silo.id} value={silo.id}>
+                {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
+                {silo.max_capacity}
+              </option>
+            );
+          })}
+        </select>
 
+        <select className="infos-to-sent" required>
+          <option value="---">To</option>
+          {silos.map((silo) => {
+            return (
+              <option key={silo.id} value={silo.id}>
+                {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
+                {silo.max_capacity}
+              </option>
+            );
+          })}
+        </select>
         <button className="transfert-btn" type="submit">
           Send
         </button>
@@ -65,7 +93,7 @@ export default function CarTransfert() {
           type="number"
           placeholder="How many car to request ?"
           value={carsTransfert.nb_vehicles}
-          name="nbCarsToTransfer"
+          name="nb_vehicles"
           onChange={handleInput}
           required
         />
@@ -79,6 +107,29 @@ export default function CarTransfert() {
           onChange={handleInput}
           required
         />
+        <select className="infos-to-sent" required>
+          <option value="---">From</option>
+          {silos.map((silo) => {
+            return (
+              <option key={silo.id} value={silo.id}>
+                {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
+                {silo.max_capacity}
+              </option>
+            );
+          })}
+        </select>
+
+        <select className="infos-to-sent" required>
+          <option value="---">To</option>
+          {silos.map((silo) => {
+            return (
+              <option key={silo.id} value={silo.id}>
+                {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
+                {silo.max_capacity}
+              </option>
+            );
+          })}
+        </select>
 
         <button className="transfert-btn" type="submit">
           Send
