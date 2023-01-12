@@ -1,0 +1,39 @@
+@use "../../App.scss";
+
+.orderdescription {
+  margin-top: 20%;
+}
+
+.orderedvehicles {
+  height: 30vh;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  border-radius: App.$borderRadius;
+  border: App.$border;
+  box-shadow: App.$boxShadow;
+}
+.orderinfo {
+  padding: 10%;
+  text-align: center;
+}
+
+.ordercgv {
+  margin-left: 33%;
+}
+
+.labelcgv {
+  padding-left: 0.5em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .orderedvehicles {
+    height: 30vh;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .orderedvehicles {
+    height: 70vh;
+  }
+}

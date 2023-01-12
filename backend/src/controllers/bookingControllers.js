@@ -1,7 +1,7 @@
 const models = require("../models");
 
 const browse = (req, res) => {
-  models.employed
+  models.booking
     .findAll()
     .then(([rows]) => {
       res.send(rows);
@@ -13,7 +13,7 @@ const browse = (req, res) => {
 };
 
 const read = (req, res) => {
-  models.employed
+  models.booking
     .find(req.params.id)
     .then(([rows]) => {
       if (rows[0] == null) {
@@ -29,14 +29,14 @@ const read = (req, res) => {
 };
 
 const edit = (req, res) => {
-  const employed = req.body;
+  const booking = req.body;
 
   // TODO validations (length, format...)
 
-  employed.id = parseInt(req.params.id, 10);
+  booking.id = parseInt(req.params.id, 10);
 
-  models.employed
-    .update(employed)
+  models.booking
+    .update(booking)
     .then(([result]) => {
       if (result.affectedRows === 0) {
         res.sendStatus(404);
@@ -51,14 +51,14 @@ const edit = (req, res) => {
 };
 
 const add = (req, res) => {
-  const employed = req.body;
+  const booking = req.body;
 
   // TODO validations (length, format...)
 
-  models.employed
-    .insert(employed)
+  models.booking
+    .insert(booking)
     .then(([result]) => {
-      res.location(`/employeds/${result.insertId}`).sendStatus(201);
+      res.location(`/bookings/${result.insertId}`).sendStatus(201);
     })
     .catch((err) => {
       console.error(err);
@@ -67,7 +67,7 @@ const add = (req, res) => {
 };
 
 const destroy = (req, res) => {
-  models.employed
+  models.booking
     .delete(req.params.id)
     .then(([result]) => {
       if (result.affectedRows === 0) {

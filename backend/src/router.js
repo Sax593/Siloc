@@ -38,14 +38,6 @@ router.put("/vehicules/:id", vehiculesControllers.edit);
 router.post("/vehicules", vehiculesControllers.add);
 router.delete("/vehicules/:id", vehiculesControllers.destroy);
 
-const employedControllers = require("./controllers/employedControllers");
-
-router.get("/employed", employedControllers.browse);
-router.get("/employed/:id", employedControllers.read);
-router.put("/employed/:id", employedControllers.edit);
-router.post("/employed", employedControllers.add);
-router.delete("/employed/:id", employedControllers.destroy);
-
 const siloControllers = require("./controllers/siloControllers");
 
 router.get("/silo", siloControllers.browse);
@@ -53,5 +45,21 @@ router.get("/silo/:id", siloControllers.read);
 router.put("/silo/:id", siloControllers.edit);
 router.post("/silo", siloControllers.add);
 router.delete("/silo/:id", siloControllers.destroy);
+
+const bookingControllers = require("./controllers/bookingControllers");
+
+router.get("/booking", bookingControllers.browse);
+router.get("/booking/:id", bookingControllers.read);
+router.put("/booking/:id", bookingControllers.edit);
+router.post("/booking", bookingControllers.add);
+router.delete("/booking/:id", bookingControllers.destroy);
+
+const transferControllers = require("./controllers/transferControllers");
+
+router.get("/transfer", transferControllers.browse);
+router.get("/transfer/:id", transferControllers.read);
+router.put("/transfer/:id", transferControllers.edit);
+router.post("/transfer", transferControllers.add);
+router.delete("/transfer/:id", transferControllers.destroy);
 
 module.exports = router;
