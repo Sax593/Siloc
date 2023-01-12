@@ -20,10 +20,11 @@
   box-shadow: App.$boxShadow;
 }
 .DateTime {
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
   margin: auto;
   margin-top: 6vh;
-  margin-left: 5vw;
 
   .CarType {
     margin: auto;

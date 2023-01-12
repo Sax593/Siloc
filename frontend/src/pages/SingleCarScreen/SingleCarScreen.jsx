@@ -2,7 +2,6 @@ import CarImage from "@components/CarImage/CarImage";
 import CarInfo from "@components/CarInfo/CarInfo";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { AiFillStar } from "react-icons/ai";
 import { useParams, Link } from "react-router-dom";
 import { ImArrowLeft } from "react-icons/im";
 import { GiHomeGarage } from "react-icons/gi";
@@ -43,25 +42,6 @@ export default function SingleCarScreen() {
       <section className="carOverview">
         <CarImage />
       </section>
-      <div className="rating">
-        <div className="stars">
-          <i className="fa fa-star gold">
-            <AiFillStar />
-          </i>
-          <i className="fa fa-star gold">
-            <AiFillStar />
-          </i>
-          <i className="fa fa-star">
-            <AiFillStar />
-          </i>
-          <i className="fa fa-star">
-            <AiFillStar />
-          </i>
-          <i className="fa fa-star">
-            <AiFillStar />
-          </i>
-        </div>
-      </div>
       <section className="carInfoOverview">
         <CarInfo />
       </section>
