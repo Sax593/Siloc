@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import tunnel from "@assets/tunnel.png";
+import { FcFeedIn, FcExport } from "react-icons/fc";
+import swal from "sweetalert";
 import "./style.scss";
 
 export default function CarTransfert() {
   const [carsTransfert, setCarsTransferts] = useState({
     nb_vehicles: "",
     time: "",
-    id: "",
+    silo_id_from: "",
+    silo_id_to: "",
   });
   const [silos, setSilos] = useState([]);
 
@@ -24,12 +27,18 @@ export default function CarTransfert() {
   const hSubmit = (evt) => {
     evt.preventDefault();
     axios.post(`${import.meta.env.VITE_BACKEND_URL}/transfert`, carsTransfert);
+    swal({
+      title: "Success",
+      text: "You clicked the button!",
+      icon: "success",
+    });
   };
+
   return (
     <div className="style-carTransfert">
       <img className="tunnel" src={tunnel} alt="tunnel" />
       <h1 className="title-cartransfert">Vehicles transfer</h1>
-      <h2 className="title-cartransfert">To send</h2>
+      <h2 className="title-cartransfert">{FcExport} To send </h2>
       <form
         className="style-form"
         encType="multipart/from-data"
@@ -57,7 +66,7 @@ export default function CarTransfert() {
           <option value="---">From</option>
           {silos.map((silo) => {
             return (
-              <option key={silo.id} value={silo.id}>
+              <option key={silo.id} value={carsTransfert.silo_id_from}>
                 {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
                 {silo.max_capacity}
               </option>
@@ -69,7 +78,7 @@ export default function CarTransfert() {
           <option value="---">To</option>
           {silos.map((silo) => {
             return (
-              <option key={silo.id} value={silo.id}>
+              <option key={silo.id} value={carsTransfert.silo_id_to}>
                 {silo.name} - {silo.localisation} - Capacity {silo.capacity}/
                 {silo.max_capacity}
               </option>
@@ -80,8 +89,7 @@ export default function CarTransfert() {
           Send
         </button>
       </form>
-
-      <h2 className="title-cartransfert">To request</h2>
+      <h2 className="title-cartransfert">{FcFeedIn} To request</h2>
 
       <form
         className="style-form"
