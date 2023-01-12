@@ -13,6 +13,7 @@ import DashboardListing from "@pages/DashboardListing/DashboardListing";
 import "./App.scss";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
 import SectorListing from "@pages/SectorListing/SectorListing";
+import CarListingScreen from "@pages/CarListingScreen/CarListingScreen";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path="/geolocation" element={<Geolocation />} />
       <Route path="/validationScreen" element={<ValidationScreen />} />
       <Route path="/sectors" element={<SectorListing />} />
+      <Route path="/listingcar" element={<CarListingScreen />} />
     </Routes>
   );
 }

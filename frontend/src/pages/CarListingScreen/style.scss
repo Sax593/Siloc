@@ -1,0 +1,12 @@
+@use "../../App.scss";
+
+.listingfilter {
+  margin: 0 3%;
+  margin-top: 10%;
+  border-radius: App.$borderRadius;
+  background-color: grey;
+}
+
+.listingcar {
+  padding: 0 0.5em;
+}
