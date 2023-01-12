@@ -9,9 +9,10 @@ import OrderSumup from "@pages/OrderSumup/OrderSumup";
 import Geolocation from "@pages/Geolocation/Geolocation";
 import StorageDashboardBySilo from "@pages/StorageDashboardBySilo/StorageDashboardBySilo";
 import DashboardListing from "@pages/DashboardListing/DashboardListing";
-import "./App.scss";
 import ValidationScreen from "@pages/ValidationScreen/Validation";
 import SectorListing from "@pages/SectorListing/SectorListing";
+import SingleCarScreen from "@pages/SingleCarScreen/SingleCarScreen";
+import "./App.scss";
 
 function App() {
   return (
@@ -21,10 +22,8 @@ function App() {
       <Route path="/form" element={<Form />} />
       <Route path="/carTransfert" element={<CarTransfert />} />
       <Route path="/dashboard" element={<CarDashboardBySilo />} />
-
       <Route path="/car/:id" element={<SingleCarScreen />} />
       <Route path="/dashboardListing" element={<DashboardListing />} />
-
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
       <Route
         path="/storageDashboard/:id"
