@@ -8,22 +8,22 @@ export default function Form() {
     firstname: "",
     lastname: "",
     email: "",
+    hashedpassword: "",
     birthdate: "",
     adress: "",
-    type: "",
+    role_id: 1,
+    licence: 0,
   });
   const handleInput = (e) => {
     setUsers({ ...users, [e.target.name]: e.target.value });
   };
-
-  axios.post("http://localhost:5000/users", users);
 
   const inputRef = useRef();
   const hSubmit = (evt) => {
     evt.preventDefault();
     const formData = new FormData();
     formData.append("license", inputRef.current.files[0]);
-    axios.post("http://localhost:5000/api/licence", formData);
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/users`, users);
   };
   return (
     <div className="style-form">
@@ -63,6 +63,15 @@ export default function Form() {
         />
         <input
           className="form-details"
+          type="password"
+          placeholder="Password"
+          name="hashedpassword"
+          value={users.password}
+          onChange={handleInput}
+          required
+        />
+        <input
+          className="form-details"
           type="date"
           placeholder="Birth date"
           name="birthdate"
@@ -82,10 +91,15 @@ export default function Form() {
 
         <label className="form-details" htmlFor="fileInput">
           I upload my licence:
-          <input type="file" name="monfichier" ref={inputRef} />
+          <input
+            type="file"
+            placeholder="I upload my licence:"
+            name="monfichier"
+            ref={inputRef}
+          />
         </label>
 
-        <button className="form-details" type="submit">
+        <button className="form-btn" type="submit">
           Envoyer
         </button>
       </form>
