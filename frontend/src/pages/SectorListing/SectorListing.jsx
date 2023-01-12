@@ -1,8 +1,8 @@
-import "./style.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { MdOutlineShareLocation } from "react-icons/md";
+import "./style.scss";
 
 export default function SectorListing() {
   const [sector, setSector] = useState([]);
@@ -24,15 +24,14 @@ export default function SectorListing() {
         {sector.map((element) => {
           return (
             <Link
-              to={{ pathname: `/storageDashboard/${element.id}` }}
+              to={{ pathname: `/sectors/${element.id}` }}
               key={element.id}
               className="sector"
             >
               <button type="button" id="sectorName">
-                <MdOutlineShareLocation className="iconLocSL" />
-
                 {element.name}
               </button>
+              <MdOutlineShareLocation className="iconLocSL" />
             </Link>
           );
         })}
