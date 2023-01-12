@@ -19,7 +19,6 @@ function App() {
       <Route path="/bookingScreen" element={<BookingScreen />} />
       <Route path="/form" element={<Form />} />
       <Route path="/carTransfert" element={<CarTransfert />} />
-      <Route path="/dashboard" element={<CarDashboardBySilo />} />
       <Route path="/car/:id" element={<SingleCarScreen />} />
       <Route path="/carDashboard" element={<CarDashboardBySilo />} />
       <Route path="/storageDashboard" element={<StorageDashboardBySilo />} />

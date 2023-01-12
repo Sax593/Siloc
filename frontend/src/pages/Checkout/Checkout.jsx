@@ -1,4 +1,5 @@
 import "./style.scss";
+import BurgerMenu from "@components/BurgerMenu/BurgerMenu";
 import { Link } from "react-router-dom";
 
 export default function Checkout() {
