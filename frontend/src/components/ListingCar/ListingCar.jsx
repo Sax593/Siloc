@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function ListingCar() {
@@ -20,9 +20,11 @@ export default function ListingCar() {
       <ul>
         {listing.map((element) => {
           return (
-            <li className="car" key={element.id}>
-              {element.brand} {element.type} {element.mileage}miles
-            </li>
+            <Link to={{ pathname: `/car/${element.id_vehicules}` }}>
+              <li className="car" key={element.id}>
+                {element.brand} {element.type} {element.mileage}miles
+              </li>
+            </Link>
           );
         })}
       </ul>
