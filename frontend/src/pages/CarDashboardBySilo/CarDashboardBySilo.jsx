@@ -25,12 +25,12 @@ export default function CarDashboardBySilo() {
       <h1 className="currentCars">My current cars</h1>
       <div className="iconMenu">
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <GiHomeGarage className="icon" />
           </button>
         </Link>
         <Link to="/sectors/2">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
         </Link>

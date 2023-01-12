@@ -12,12 +12,12 @@ export default function CarListingScreen() {
       <h1 className="carsListTitle">List of cars</h1>
       <div className="iconMenu">
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <GiHomeGarage className="icon" />
           </button>
         </Link>
         <Link to="/carDashboard/2">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
         </Link>

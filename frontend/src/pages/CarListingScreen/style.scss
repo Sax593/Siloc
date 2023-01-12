@@ -23,7 +23,16 @@
 .iconMenu {
   display: flex;
   justify-content: center;
+  border: hidden;
+  background-color: unset;
+  margin: 1em;
+  height: 2em;
 }
-.homeIcon {
+
+#homeIcon {
   margin-top: 1rem;
+  border: hidden;
+  background-color: unset;
+  margin: 0.5em;
+  font-size: 1.5em;
 }
