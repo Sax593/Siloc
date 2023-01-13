@@ -29,12 +29,12 @@ export default function SingleCarScreen() {
       <h2 className="typeCar">{vehicle.type}</h2>
       <div className="iconMenu">
         <Link to="/sectors">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <GiHomeGarage className="icon" />
           </button>
         </Link>
         <Link to="/listingcar">
-          <button type="button" className="homeIcon">
+          <button type="button" id="homeIcon">
             <ImArrowLeft className="icon" />
           </button>
         </Link>
