@@ -46,7 +46,7 @@ export default function DateTime() {
       </div>
       <div className="DateTime">
         <label className="ADDate">
-          Départ
+          Outbound date
           <input
             name="departure_time"
             defaultValue={data.departure_time}
@@ -55,7 +55,7 @@ export default function DateTime() {
           />
         </label>
         <label className="ADDate">
-          Arrivée
+          Return date
           <input
             name="arrival_time"
             defaultValue={data.arrival_time}

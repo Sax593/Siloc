@@ -20,9 +20,9 @@ export default function CarInfo() {
     if (vehicle.disponibility_id === 1) {
       setStatus("available");
     } else if (vehicle.disponibility_id === 2) {
-      setStatus("rented");
+      setStatus("outside");
     } else {
-      setStatus("storage process");
+      setStatus("maintenance");
     }
   }, []);
 
@@ -35,7 +35,7 @@ export default function CarInfo() {
       <div className="kmRemaining">
         {10000 - vehicle.mileage} Miles remaining before maintenance
       </div>
-      <div className="goToMaintenance">Go to maintenance : {status}</div>
+      <div className="goToMaintenance">Current state : {status}</div>
     </section>
   );
 }

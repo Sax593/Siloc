@@ -72,7 +72,7 @@ export default function DashboardListing() {
           <button type="button" className="carTransfert">
             <AiFillCar className="iconDB" />
             <BsArrowLeftRight className="iconDB" />
-            <h4 className="textDL">Car transfert</h4>
+            <h4 className="textDL">Car transfers</h4>
           </button>
         </Link>
       </div>

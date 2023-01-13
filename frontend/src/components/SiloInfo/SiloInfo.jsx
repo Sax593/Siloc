@@ -6,10 +6,10 @@ export default function SiloInfo({ capacity, maxCapacity }) {
   return (
     <section className="siloInfo">
       <button type="button" className="storageRemain">
-        {remaining} storages remaining
+        {remaining} free slots
       </button>
       <button type="button" className="storageFull">
-        {capacity} full storages
+        {capacity} full slots
       </button>
     </section>
   );

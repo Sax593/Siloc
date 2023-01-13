@@ -39,7 +39,7 @@ export default function CarTransfert() {
 
   return (
     <div className="style-carTransfert">
-      <h1 className="title-cartransfert titleVT">Vehicle transfer</h1>
+      <h1 className="title-cartransfert titleVT">Car transfers</h1>
       <div className="iconMenu">
         <Link to="/sectors">
           <button type="button" id="homeIcon">
