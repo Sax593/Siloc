@@ -1,5 +1,6 @@
 import logo from "@assets/logo.png";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
 import "./style.scss";
@@ -15,6 +16,7 @@ export default function Form() {
     role_id: 1,
     licence: 0,
   });
+  const navigate = useNavigate();
   const handleInput = (e) => {
     setUsers({ ...users, [e.target.name]: e.target.value });
   };
@@ -30,6 +32,7 @@ export default function Form() {
       text: "Your account has been registered",
       icon: "success",
     });
+    navigate("/");
   };
   return (
     <div className="style-form">
